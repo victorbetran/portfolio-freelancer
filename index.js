@@ -1,6 +1,10 @@
 var express = require('express');
-var app = express();
+var compression = require('compression')
 var path = require("path");
+
+var app = express();
+
+app.use(compression())
 app.use('/public', express.static('public'));
 
 
